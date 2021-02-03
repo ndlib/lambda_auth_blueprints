@@ -1,0 +1,60 @@
+{
+  "name": "lambda_auth_blueprints",
+  "author": "Hesburgh Libraries - WSE <web-and-software-engineering-group@nd.edu> (https://library.nd.edu)",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndlib/lambda_auth_blueprints.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndlib/lambda_auth_blueprints/issues"
+  },
+  "homepage": "https://github.com/ndlib/lambda_auth_blueprints#readme",
+  "keywords": [
+    "aws",
+    "cdk",
+    "ndlib"
+  ],
+  "bin": {
+    "src": "bin/cdk.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "format": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "eslint '*/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.87.1",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "@types/source-map-support": "^0.5.3",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "aws-cdk": "1.87.1",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.4.2",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-codebuild": "1.87.1",
+    "@aws-cdk/aws-codepipeline": "1.87.1",
+    "@aws-cdk/aws-codepipeline-actions": "1.87.1",
+    "@aws-cdk/aws-iam": "1.87.1",
+    "@aws-cdk/aws-lambda": "1.87.1",
+    "@aws-cdk/aws-logs": "1.87.1",
+    "@aws-cdk/aws-s3": "1.87.1",
+    "@aws-cdk/aws-ssm": "1.87.1",
+    "@aws-cdk/core": "1.87.1",
+    "@ndlib/ndlib-cdk": "^1.6.0",
+    "source-map-support": "^0.5.16"
+  }
+}
