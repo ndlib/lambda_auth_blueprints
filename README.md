@@ -15,6 +15,6 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## Deployment
 ```
-cdk deploy lambdaauth-pipeline -c slackNotifyStackName=[stack-name]
+cdk deploy lambda-auth-pipeline -c slackNotifyStackName=[stack-name]
 ```
 Please ensure Slack notifications will go to #wse-deployment-approvals.
