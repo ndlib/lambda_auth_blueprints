@@ -2,7 +2,7 @@ import { ServicePrincipal } from '@aws-cdk/aws-iam'
 import { Function, Code, Runtime } from '@aws-cdk/aws-lambda'
 import { RetentionDays } from '@aws-cdk/aws-logs'
 import { StringParameter } from '@aws-cdk/aws-ssm'
-import { Construct, Stack, StackProps, Duration } from '@aws-cdk/core'
+import { Construct, Stack, StackProps, Duration, CfnOutput } from '@aws-cdk/core'
 
 export interface ILambdaAuthStackProps extends StackProps {
   readonly stage: string
@@ -39,6 +39,11 @@ export default class LambdaAuthStack extends Stack {
     authFunction.addPermission('InvokePermission', {
       principal: new ServicePrincipal('apigateway.amazonaws.com'),
       action: 'lambda:InvokeFunction',
+    })
+
+    new CfnOutput(this, 'LambdaNameExport', {
+      value: authFunction.functionName,
+      exportName: `${props.stackName}:LambdaName`,
     })
   }
 }
