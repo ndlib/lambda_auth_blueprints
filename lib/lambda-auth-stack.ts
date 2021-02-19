@@ -45,5 +45,10 @@ export default class LambdaAuthStack extends Stack {
       value: authFunction.functionName,
       exportName: `${props.stackName}:LambdaName`,
     })
+
+    new CfnOutput(this, 'LambdaArnExport', {
+      value: authFunction.functionArn,
+      exportName: `${props.stackName}Arn`, // Named for backwards compatibility
+    })
   }
 }
